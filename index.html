@@ -1,165 +1,641 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>OCI SCIM</title>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+  <title>OCI SCIM</title>
 
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  </head>
-  <body>
-    
-    <nav id="navbar">
-      <header>
-        Oracle Cloud Infrastructure SCIM
-      </header>
-      
-      <a href="#intro">Section</a>
-      <a href="#">Section</a>
-      <a href="#">Section</a>
-      <a href="#">Section</a>
-      <a href="#">Section</a>
-      <a href="#intro">Section</a>
-      <a href="#">Section</a>
-      <a href="#">Section</a>
-      <a href="#">Section</a>
-      <a href="#">Section</a>
-       <a href="#intro">Section</a>
-      <a href="#">Section</a>
-      <a href="#">Section</a>
-      <a href="#">Section</a>
-      <a href="#">Section</a>
-      <a href="#intro">Section</a>
-      <a href="#">Section</a>
-      <a href="#">Section</a>
-      <a href="#">Section</a>
-      <a href="#">Secn</a>
-      
-<!--       <select name="sections">
-        <option value="Intro">Introduction</option>
-        <option value="Begin">Beginning</option>
-      </select> -->
-      
-    </nav>
-    
-    
-    <main id="main-doc">
-      
-      <section class="main-section" id="">
-        <header>
-          Introduction to this section
-        </header>  
-        <p>
-          Section text exists here. This is a very long sentence. Can it handle being in this part of the text? Please double check this and let me know.
-        </p>
-        
-        <pre>
-          <code>
-          if(this is it) {
-            test this;
-          }
-          </code>
-        
-        </pre>
-      </section>
-      
-      
-      <section class="main-section" id="">
-        <header>
-          Introduction to this section
-        </header>  
-        <p>
-         Section text exists here. This is a very long sentence. Can it handle being in this part of the text? Please double check this and let me know.
-        </p>
-        <pre>
-          <code>
-          if(this is it) {
-            test this;
-          }
-          </code>
-        
-        </pre>
-      </section>
-      
-      
-      <section class="main-section" id="">
-        <header>
-          Introduction to this section
-        </header>  
-        <p>
-          Section text exists here. This is a very long sentence. Can it handle being in this part of the text? Please double check this and let me know.
-        </p>
-        <code>
-          This is code.
-        </code>
-      </section>
-      
-      
-      <section class="main-section" id="">
-        <header>
-          Introduction to this section
-        </header>  
-        <p>
-          Section text exists here. This is a very long sentence. Can it handle being in this part of the text? Please double check this and let me know.
-        </p>
-        <code>
-          This is code.
-        </code>
-      </section>
-      
-      <section class="main-section" id="">
-        <header>
-          Introduction to this section
-        </header>  
-        <p>
-          Section text exists here. This is a very long sentence. Can it handle being in this part of the text? Please double check this and let me know.
-        </p>
-        <code>
-          This is code.
-        </code>
-      </section>
-      <section class="main-section" id="">
-        <header>
-          Introduction to this section
-        </header>  
-        <p>
-          Section text exists here. This is a very long sentence. Can it handle being in this part of the text? Please double check this and let me know.
-        </p>
-        <code>
-          This is code.
-        </code>
-      </section>
-      <section class="main-section" id="">
-        <header>
-          Introduction to this section
-        </header>  
-        <p>
-          Section text exists here. This is a very long sentence. Can it handle being in this part of the text? Please double check this and let me know.
-        </p>
-        <code>
-          This is code.
-        </code>
-      </section>
-      <section class="main-section" id="intro">
-        <header>
-          Introduction to this section
-        </header>  
-        <p>
-          Section text exists here. This is a very long sentence. Can it handle being in this part of the text? Please double check this and let me know.
-        </p>
-        <code>
-          This is code.
-        </code>
-      </section>
-    
-    </main>
-<!--     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
-    
-  </body>
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- import the webpage's javascript file -->
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>Oracle Cloud Infrastructure SCIM</header>
+
+    <a href="#intro">Introduction</a>
+    <a href="#base">Base Resource URLs</a>
+    <a href="#parameters">Parameters</a>
+    <a href="#users">Users</a>
+    <a href="#groups">Groups</a>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="intro">
+      <header>Introduction to OCI SCIM</header>
+      <p>
+        The following documentation provides the basic endpoints needed to
+        utilize Oracle Cloud Infrastructure's SCIM.
+      </p>
+    </section>
+
+    <section class="main-section" id="base">
+      <header>Base Resource URLs</header>
+      <ul>
+        <li>
+          Base URL: https://&lt;region-name&gt;.scim.oci.oraclecloud.com/v2
+        </li>
+        <li>
+          Oauth Creds:
+          https://auth.&lt;region-name&gt;.oraclecloud.com/oauth2/token
+        </li>
+        <li>
+          Core Schemas:
+          https://&lt;region-name&gt;.scim.oci.oraclecloud.com/v2/Schemas
+        </li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="parameters">
+      <header>Parameters</header>
+      <ul>
+        <li>grant_type: client_credentials</li>
+        <li>scope: urn:oracle:oci:scim-service</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="users">
+      <header>Users</header>
+      <h4>
+        Resource: /Users
+      </h4>
+      <ol>
+        <li>
+          <div>Create a user</div><br>
+          <div><strong>POST</strong></div>
+          <div>https://<em><strong>&lt;region-name&gt;</em></strong>.scim.oci.oraclecloud.com/v2/Users</div><br>
+          
+          <strong>Sample Payloads</strong><br><br>
+          <ol>
+            <li>
+              <strong>Request Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
+                    "userName": "test_user",
+                    "externalId": "extid"
+                  } 
+                  </code>
+                </pre>
+              <strong>Response Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
+                    "id": "{user_ocid}",
+                    "externalId": "extid",
+                    "userName": "test_user",
+                    "version": "W/\"536318337495399554cd5fefb2917932e9a43ab6\"",
+                    "active": true,
+                    "meta": {
+                      "resourceType": "User",
+                      "created": "2020-05-14T05:19:32.287Z",
+                      "lastModified": "2020-05-14T05:19:32.287Z",
+                      "location": "https://<region-name>.scim.oci.oraclecloud.com/v2/Users/{user_ocid}",
+                      "version": "W/\"536318337495399554cd5fefb2917932e9a43ab6\""
+                    }
+                  }
+                  </code>
+                </pre>
+            </li>
+            <li>
+              <strong>Request Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
+                    "userName": "Runscope608Gzcyagflp869@atko.com",
+                    "name": { "givenName": "Runscope608", "familyName": "Gzcyagflp869" },
+                    "emails": [
+                      {
+                        "primary": true,
+                        "value": "Runscope608Gzcyagflp869@atko.com",
+                        "type": "work"
+                      }
+                    ],
+                    "displayName": "Runscope608 Gzcyagflp869",
+                    "active": true
+                  } 
+                  </code>
+                </pre>
+              <strong>Response Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
+                    "id": "{user_ocid}",
+                    "externalId": "extid",
+                    "userName": "test_user",
+                    "version": "W/\"536318337495399554cd5fefb2917932e9a43ab6\"",
+                    "active": true,
+                    "meta": {
+                      "resourceType": "User",
+                      "created": "2020-05-14T05:19:32.287Z",
+                      "lastModified": "2020-05-14T05:19:32.287Z",
+                      "location": "https://<region-name>.scim.oci.oraclecloud.com/v2/Users/{user_ocid}",
+                      "version": "W/\"536318337495399554cd5fefb2917932e9a43ab6\""
+                    }
+                  }
+                  </code>
+                </pre>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <div>Get a user by OCID</div><br>
+          <div><strong>GET</strong></div>
+          <div>https://<em><strong>&lt;region-name&gt;</em></strong>.scim.oci.oraclecloud.com/v2/Users/{user_ocid}</div><br>
+          
+          <strong>Sample Payloads</strong><br><br>
+          <ol>
+            <li>
+              <strong>Request Body:</strong>
+              <pre>
+                  <code>
+                  (no body) 
+                  </code>
+                </pre>
+              <strong>Response Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
+                    "id": "{user_ocid}",
+                    "externalId": "extid",
+                    "userName": "test_user",
+                    "version": "W/\"a693373ddd9791b6457e7775d57e4fd17a5e50ed\"",
+                    "active": true,
+                    "groups": [],
+                    "meta": {
+                      "resourceType": "User",
+                      "created": "2020-05-14T05:19:32.287Z",
+                      "lastModified": "2020-05-14T05:19:33.760Z",
+                      "location": "https://<region-name>.scim.oci.oraclecloud.com/v2/Users/{user_ocid}",
+                      "version": "W/\"a693373ddd9791b6457e7775d57e4fd17a5e50ed\""
+                    }
+                  }
+                  </code>
+                </pre>
+            </li>
+          </ol>
+        </li>
+
+
+        <li>
+          <div>Get a user by username</div><br>
+          <div><strong>GET</strong></div>
+          <div>https://<em><strong>&lt;region-name&gt;</em></strong>.scim.oci.oraclecloud.com/v2/Users?filter=userName eq "Runscope608Gzcyagflp869%40atko.com"</div><br>
+          
+          <strong>Sample Payloads</strong><br><br>
+          <ol>
+            <li>
+              <strong>Request Body:</strong>
+              <pre>
+                  <code>
+                  (no body) 
+                  </code>
+                </pre>
+              <strong>Response Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:api:messages:2.0:ListResponse"],
+                    "totalResults": 1,
+                    "itemsPerPage": 1,
+                    "startIndex": 1,
+                    "Resources": [
+                      {
+                        "id": "{user_ocid}",
+                        "userName": "Runscope608Gzcyagflp869@atko.com",
+                        "active": true,
+                        "emails": [
+                          {
+                            "value": "Runscope608Gzcyagflp869@atko.com",
+                            "primary": false
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  </code>
+                </pre>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <div>Get the first user</div><br>
+          <div><strong>GET</strong></div>
+          <div>https://<em><strong>&lt;region-name&gt;</em></strong>.scim.oci.oraclecloud.com/v2/Users?count=1&startIndex=1</div><br>
+          
+          <strong>Sample Payloads</strong><br><br>
+          <ol>
+            <li>
+              <strong>Request Body:</strong>
+              <pre>
+                  <code>
+                  (no body) 
+                  </code>
+                </pre>
+              <strong>Response Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:api:messages:2.0:ListResponse"],
+                    "totalResults": 1,
+                    "itemsPerPage": 1,
+                    "startIndex": 1,
+                    "Resources": [
+                      {
+                        "id": "{user_ocid}",
+                        "userName": "Runscope608Gzcyagflp869@atko.com",
+                        "active": true,
+                        "emails": [
+                          {
+                            "value": "Runscope608Gzcyagflp869@atko.com",
+                            "primary": false
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                  </code>
+                </pre>
+            </li>
+          </ol>
+        </li>
+
+
+        <li>
+          <div>Update a user</div><br>
+          <div><strong>PATCH</strong></div>
+          <div>https://<em><strong>&lt;region-name&gt;</em></strong>.scim.oci.oraclecloud.com/v2/Users/{user_ocid}</div><br>
+          
+          <strong>Sample Payloads</strong><br><br>
+          <ol>
+            <li>
+              <strong>Request Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
+                    "Operations": [{ "op": "replace", "value": { "active": "False" } }]
+                  }
+                  </code>
+                </pre>
+              <strong>Response Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:schemas:core:2.0:User"],
+                    "id": "{user_ocid}",
+                    "externalId": "extid",
+                    "userName": "test_user",
+                    "version": "W/\"c084da813955cb439b93c30c1c6e03fecaf117b5\"",
+                    "active": false,
+                    "groups": [],
+                    "meta": {
+                      "resourceType": "User",
+                      "created": "2020-05-14T05:19:32.287Z",
+                      "lastModified": "2020-05-14T05:19:32.404Z",
+                      "location": "https://<region-name>.scim.oci.oraclecloud.com/v2/Users/{user_ocid}",
+                      "version": "W/\"c084da813955cb439b93c30c1c6e03fecaf117b5\""
+                    }
+                  }
+                  </code>
+                </pre>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <div>Delete a user</div><br>
+          <div><strong>DELETE</strong></div>
+          <div>https://<em><strong>&lt;region-name&gt;</em></strong>.scim.oci.oraclecloud.com/v2/Users/{user_ocid}</div><br>
+          
+          <strong>Sample Payloads</strong><br><br>
+          <ol>
+            <li>
+              <strong>Request Body:</strong>
+              <pre>
+                  <code>
+                  (no body)
+                  </code>
+                </pre>
+              <strong>Response Body:</strong>
+              <pre>
+                  <code>
+                  (no body)
+                  </code>
+                </pre>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+
+
+    <section class="main-section" id="groups">
+      <header>Groups</header>
+      <h4>
+        Resource: /Groups
+      </h4>
+      <ol>
+        <li>
+          <div>Create a group</div><br>
+          <div><strong>POST</strong></div>
+          <div>https://<em><strong>&lt;region-name&gt;</em></strong>.scim.oci.oraclecloud.com/v2/Groups</div><br>
+          
+          <strong>Sample Payloads</strong><br><br>
+          <ol>
+            <li>
+              <strong>Request Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:schemas:core:2.0:Group"],
+                    "displayName": "test_group",
+                    "externalId": "extid"
+                  }
+                  </code>
+                </pre>
+              <strong>Response Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:schemas:core:2.0:Group"],
+                    "id": "{group_ocid}",
+                    "externalId": "extid",
+                    "displayName": "test_group",
+                    "version": "W/\"4e55ad2f75559d91864384eb5da0b4f6734ef440\"",
+                    "meta": {
+                      "resourceType": "Group",
+                      "created": "2020-05-14T05:15:26.717Z",
+                      "lastModified": "2020-05-14T05:15:26.717Z",
+                      "location": "https://<region-name>.scim.oci.oraclecloud.com/v2/Groups/{group_ocid}",
+                      "version": "W/\"4e55ad2f75559d91864384eb5da0b4f6734ef440\""
+                    }
+                  }
+                  </code>
+                </pre>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <div>Get a group by display name with provided attributes</div><br>
+          <div><strong>GET</strong></div>
+          <div>https://<em><strong>&lt;region-name&gt;</em></strong>.scim.oci.oraclecloud.com/v2/Groups?displayName eq "test_group"&attributes=groups,id,displayName</div><br>
+          
+          <strong>Sample Payloads</strong><br><br>
+          <ol>
+            <li>
+              <strong>Request Body:</strong>
+              <pre>
+                  <code>
+                  (no body) 
+                  </code>
+                </pre>
+              <strong>Response Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:api:messages:2.0:ListResponse"],
+                    "totalResults": 1,
+                    "itemsPerPage": 1,
+                    "startIndex": 1,
+                    "Resources": [
+                      {
+                        "schemas": ["urn:ietf:params:scim:schemas:core:2.0:Group"],
+                        "id": "{group_ocid}",
+                        "externalId": "extid",
+                        "displayName": "test_group",
+                        "meta": {
+                          "resourceType": "Group",
+                          "created": "2020-05-14T05:15:26.717Z",
+                          "lastModified": "2020-05-14T05:15:26.717Z",
+                          "location": "/v2/Groups/{group_ocid}",
+                          "version": null
+                        }
+                      }
+                    ]
+                  } 
+                  </code>
+                </pre>
+            </li>
+          </ol>
+        </li>
+
+
+        <li>
+          <div>Get a group by display name using filter syntax</div><br>
+          <div><strong>GET</strong></div>
+          <div>https://<em><strong>&lt;region-name&gt;</em></strong>.scim.oci.oraclecloud.com/v2/Groups?filter=displayName eq "test_group"</div><br>
+          
+          <strong>Sample Payloads</strong><br><br>
+          <ol>
+            <li>
+              <strong>Request Body:</strong>
+              <pre>
+                  <code>
+                  (no body) 
+                  </code>
+                </pre>
+              <strong>Response Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:api:messages:2.0:ListResponse"],
+                    "totalResults": 1,
+                    "itemsPerPage": 1,
+                    "startIndex": 1,
+                    "Resources": [
+                      {
+                        "schemas": ["urn:ietf:params:scim:schemas:core:2.0:Group"],
+                        "id": "{group_ocid}",
+                        "externalId": "extid",
+                        "displayName": "test_group",
+                        "meta": {
+                          "resourceType": "Group",
+                          "created": "2020-05-14T05:14:14.723Z",
+                          "lastModified": "2020-05-14T05:14:14.723Z",
+                          "location": "/v2/Groups/{group_ocid}",
+                          "version": null
+                        }
+                      }
+                    ]
+                  }
+                  </code>
+                </pre>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <div>Get all groups</div><br>
+          <div><strong>GET</strong></div>
+          <div>https://<em><strong>&lt;region-name&gt;</em></strong>.scim.oci.oraclecloud.com/v2/Groups</div><br>
+          
+          <strong>Sample Payloads</strong><br><br>
+          <ol>
+            <li>
+              <strong>Request Body:</strong>
+              <pre>
+                  <code>
+                  (no body) 
+                  </code>
+                </pre>
+              <strong>Response Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:api:messages:2.0:ListResponse"],
+                    "totalResults": 1,
+                    "itemsPerPage": 1,
+                    "startIndex": 1,
+                    "Resources": [
+                      {
+                        "schemas": ["urn:ietf:params:scim:schemas:core:2.0:Group"],
+                        "id": "{group_ocid}",
+                        "externalId": "extid",
+                        "displayName": "test_group",
+                        "meta": {
+                          "resourceType": "Group",
+                          "created": "2020-05-14T05:18:13.431Z",
+                          "lastModified": "2020-05-14T05:18:13.431Z",
+                          "location": "/v2/Groups/{group_ocid}",
+                          "version": null
+                        }
+                      }
+                    ]
+                  }
+                  </code>
+                </pre>
+            </li>
+          </ol>
+        </li>
+
+
+        <li>
+          <div>Add a member to the group</div><br>
+          <div><strong>PATCH</strong></div>
+          <div>https://<em><strong>&lt;region-name&gt;</em></strong>.scim.oci.oraclecloud.com/v2/Groups/{group_ocid}</div><br>
+          
+          <strong>Sample Payloads</strong><br><br>
+          <ol>
+            <li>
+              <strong>Request Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
+                    "Operations": [
+                      { "op": "add", "path": "members", "value": [{ "value": "{user_ocid}" }] }
+                    ]
+                  }
+                  </code>
+                </pre>
+              <strong>Response Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:schemas:core:2.0:Group"],
+                    "id": "{group_ocid}",
+                    "externalId": "extid",
+                    "displayName": "test_group",
+                    "version": "W/\"b865d336e77e783c8fb8fa86adbadbc16e844af7\"",
+                    "meta": {
+                      "resourceType": "Group",
+                      "created": "2020-05-14T05:17:37.656Z",
+                      "lastModified": "2020-05-14T05:17:37.863Z",
+                      "location": "https://<region-name>.scim.oci.oraclecloud.com/v2/Groups/{group_ocid}",
+                      "version": "W/\"b865d336e77e783c8fb8fa86adbadbc16e844af7\""
+                    }
+                  }
+                  </code>
+                </pre>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <div>Delete a member from the group</div><br>
+          <div><strong>PATCH</strong></div>
+          <div>https://<em><strong>&lt;region-name&gt;</em></strong>.scim.oci.oraclecloud.com/v2/Groups/{group_ocid}</div><br>
+          
+          <strong>Sample Payloads</strong><br><br>
+          <ol>
+            <li>
+              <strong>Request Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:api:messages:2.0:PatchOp"],
+                    "Operations": [
+                      { "op": "remove", "path": "members[value eq \"{user_ocid}\"]" }
+                    ]
+                  }
+                  </code>
+                </pre>
+              <strong>Response Body:</strong>
+              <pre>
+                  <code>
+                  {
+                    "schemas": ["urn:ietf:params:scim:schemas:core:2.0:Group"],
+                    "id": "{group_ocid}",
+                    "externalId": "extid",
+                    "displayName": "test_group",
+                    "version": "W/\"0aa3762ddd30beb0a06276cbc9721a462cd1cdba\"",
+                    "meta": {
+                      "resourceType": "Group",
+                      "created": "2020-05-14T05:13:46.791Z",
+                      "lastModified": "2020-05-14T05:13:46.900Z",
+                      "location": "https://<region-name>.scim.oci.oraclecloud.com/v2/Groups/{group_ocid}",
+                      "version": "W/\"0aa3762ddd30beb0a06276cbc9721a462cd1cdba\""
+                    }
+                  }
+                  </code>
+                </pre>
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          <div>Delete a group</div><br>
+          <div><strong>DELETE</strong></div>
+          <div>https://<em><strong>&lt;region-name&gt;</em></strong>.scim.oci.oraclecloud.com/v2/Groups/{group_ocid}</div><br>
+          
+          <strong>Sample Payloads</strong><br><br>
+          <ol>
+            <li>
+              <strong>Request Body:</strong>
+              <pre>
+                  <code>
+                  (no body)
+                  </code>
+                </pre>
+              <strong>Response Body:</strong>
+              <pre>
+                  <code>
+                  (no body)
+                  </code>
+                </pre>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+
+  </main>
+  <!--     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+
 </html>

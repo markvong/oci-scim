@@ -1,41 +1,39 @@
 /* CSS files add styling rules to your content */
 :root {
-  --gray: rgba(0,0,0,0.1);
+  --gray: rgba(0, 0, 0, 0.1);
 }
 body {
   font-family: verdana, arial, sans-serif;
-/*   margin: 2em; */
+  /*   margin: 2em; */
   margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-/*   border: 2px red solid; */
+  /*   border: 2px red solid; */
 }
 
 nav {
   position: fixed;
-  left:0;
-  top:0;
-  bottom:0;
+  left: 0;
+  top: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-/*   margin-right:5%; */
+  /*   margin-right:5%; */
   width: 300px;
   padding: 2em 0 0 2em;
-  text-align:center;
-  overflow-y:scroll;
-  overflow-x:hidden;
-/*   border: 2px black solid; */
+  text-align: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /*   border: 2px black solid; */
 }
 ::-webkit-scrollbar {
-    width: 0px;  
-    background: transparent;  
+  width: 0px;
+  background: transparent;
 }
 nav > header {
-  
   padding: 0 0 20px 0;
-  
 }
 
 a:link {
@@ -44,10 +42,12 @@ a:link {
   color: black;
   border-top: 1px black solid;
 }
-a:hover, a:active, a:focus {
+a:hover,
+a:active,
+a:focus {
   color: var(--gray);
 }
-a:visited{
+a:visited {
   border-top: 1px black solid;
   color: black;
 }
@@ -55,15 +55,16 @@ a:visited{
 main {
   border-left: 1px black solid;
   padding: 2em 2em 2em 2em;
-/*   border: 1px red solid; */
+  /*   border: 1px red solid; */
   margin-left: 25rem;
   width: 100%;
   height: 100%;
 }
 
 section {
-/*   border: 1px red solid; */
+  /*   border: 1px red solid; */
   padding: 1.5em 1.5em 1.5em 1.5em;
+  border-bottom: 1px black solid;
 }
 
 header {
@@ -71,30 +72,31 @@ header {
   font-size: 20px;
 }
 
-p, code {
+p,
+code {
   padding: 0 1.5rem 0 1.5rem;
-/*   border: 2px red solid; */
+  /*   border: 2px red solid; */
 }
 
 pre {
   background: var(--gray);
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   body {
     flex-direction: column;
     margin: 2em;
   }
   nav {
     position: relative;
-/*       position: fixed;
+    /*       position: fixed;
     top: 0;
     bottom: 0; */
-/*     overflow: visible; */
-/*     background-color: red; */
+    /*     overflow: visible; */
+    /*     background-color: red; */
     padding: 0;
     width: 100%;
-/*     border: 1px red solid; */
+    /*     border: 1px red solid; */
     margin: 0;
   }
   nav > header {
@@ -102,7 +104,7 @@ pre {
     padding-bottom: 1em;
     background-color: white;
   }
-/*   a {
+  /*   a {
     display: none;
   } */
   a:link {
@@ -114,20 +116,21 @@ pre {
   a:visited {
     border-top: none;
     border-bottom: 1px black solid;
-  } 
+  }
   main {
     margin: 2rem 0 0 0;
-/*     margin-top: 200rem; */
-/*     border: 1px green solid; */
+    /*     margin-top: 200rem; */
+    /*     border: 1px green solid; */
     border: none;
     padding: 0;
   }
   section {
     margin: 0 0 1rem 0;
-/*     border: 1px red solid; */
+    /*     border: 1px red solid; */
     padding: 0;
   }
-  p, code {
-/*     padding: 0; */
+  p,
+  code {
+    /*     padding: 0; */
   }
 }
